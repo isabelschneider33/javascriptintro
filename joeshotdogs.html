@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+  <script language="javascript">
+    document.write("<h1>Welcome to Joe's Hotdogs</h1>");
+    a = prompt("how many hotdogs?", "1");
+    b = prompt("how many fries?", "1");
+    c = prompt("how many sodas?", "1");
+    hotdogs = 3.25 * (a);
+    fries = 2 * (b);
+    drinks = 1.50 * (c);
+    total = Number(hotdogs) + Number(fries) + Number(drinks);
+    hotdogs = hotdogs.toFixed(2), fries = fries.toFixed(2),
+        drinks = drinks.toFixed(2), total = total.toFixed(2);
+
+    document.write("<h2>Your Order</h2>");
+    document.write("# Hotdogs: " + a + " at $3.25 is $" + hotdogs);
+    document.write("<br/>");
+    document.write("# Fries: " + b + " at $2.00 is $" + fries);
+    document.write("<br/>");
+    document.write("# Drinks: " + c + " at $1.50 is $" + drinks);
+    document.write("<br/>");
+    if((total) > 20){
+      document.write("You qualified for our 10% discount")
+      document.write("<br/>");
+      total = (total) - ((total)/10);
+    }
+    document.write("Subtotal: $" + total);
+    document.write("<br/>");
+    tax = (total) * .0625;
+    tax = tax.toFixed(2);
+    document.write("Meals tax: $" + tax);
+    document.write("<br/>");
+    newtotal = Number(total) + Number(tax);
+    newtotal = newtotal.toFixed(2);
+    document.write("Total: $" + newtotal);
+  </script>
+</body>
+</html>
